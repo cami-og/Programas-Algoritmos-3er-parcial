@@ -49,7 +49,7 @@ int main()
   }
    
   void serie3(int n){
-    for(int i=n; i<=n; i= i-1){
+    for(int i=n; i>=1; i= i-1){
       printf("%d ", i);
     }
     printf("\n");
