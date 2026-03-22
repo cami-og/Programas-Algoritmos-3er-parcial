@@ -4,7 +4,7 @@
  
 //Prototipo de función
 void imprimirSerie(int);
-double sumaSerie(int)
+double sumaSerie(int);
  
 int main() {
     int num;
