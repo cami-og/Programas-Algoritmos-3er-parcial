@@ -6,6 +6,7 @@
 #include <stdio.h>  // OBLIGATORIA: Te permite usar printf (imprimir) y scanf (leer datos).
 #include <stdlib.h> // Útil para funciones del sistema, manejo de memoria, o la función system("pause").
 #include <math.h>   // OJO: Si en el examen te piden usar potencias pow() o raíces sqrt(), necesitas esta.
+#include <time.h>    // Contiene time() para usar como semilla
 
 // ==============================================================================
 // 2. FUNCIONES (Se declaran ANTES del main para que el programa sepa que existen)
