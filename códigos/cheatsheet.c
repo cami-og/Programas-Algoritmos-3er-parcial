@@ -133,3 +133,9 @@ int main() {
 
     return 0; // Indica que el programa principal (main) terminó sin errores.
 }
+//***** comparar números en if ***
+|| //para decir OR
+&& // para decir AND
+!= // para diferente de 
+== // para igual a 
+   
