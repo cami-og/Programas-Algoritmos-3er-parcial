@@ -1,0 +1,58 @@
+/* ============================================================================
+   TEMA 1: FUNCIONES
+   ============================================================================
+   Una función es un bloque de código reutilizable. 
+   Partes vitales que suelen preguntar en exámenes:
+   1. Prototipo (Firma): Va antes del main(). Le dice al compilador "esta función existe".
+   2. Llamada: Cuando la usas dentro del main() u otra función.
+   3. Definición: El bloque de código real.
+*/
+// PROTOTIPO: tipo_retorno nombre(parametros);
+int sumarArreglo(int x[], int n); 
+
+/* TIPS DE EXAMEN SOBRE FUNCIONES:
+   - "Paso por valor": Se envía una copia de la variable. Si la modificas en la función, la original NO cambia.
+   - "Paso por referencia" (Arreglos): Cuando pasas un arreglo a una función, NO se hace una copia. 
+     Se pasa la dirección de memoria. ¡Cualquier cambio al arreglo dentro de la función altera el arreglo original!
+*/
+
+/* ============================================================================
+   TEMA 2: ARREGLOS UNIDIMENSIONALES (VECTORES)
+   ============================================================================
+   Un arreglo es un conjunto de elementos del mismo tipo[cite: 231].
+*/
+int calificaciones[5] = {56, 89, 100, 90, 92}; 
+// Las posiciones (índices) SIEMPRE empiezan en 0 y terminan en n-1[cite: 251, 252, 253, 254, 255].
+// calificaciones[0] es 56, calificaciones[4] es 92 [cite: 258, 262].
+
+/* TIPS DE EXAMEN SOBRE ARREGLOS:
+   - Desbordamiento (Out of bounds): C no revisa si te sales del arreglo. Si tienes 5 elementos
+     e intentas acceder a `calificaciones[5]`, leerás basura en memoria o tu programa fallará (Segmentation fault).
+   - Recorrido: Siempre se usa un ciclo (casi siempre 'for') para recorrerlos[cite: 283].
+*/
+
+/* ============================================================================
+   TEMA 3: MATRICES (ARREGLOS BIDIMENSIONALES)
+   ============================================================================
+   Son colecciones de datos organizados en filas (renglones) y columnas[cite: 139].
+   Requieren dos índices [cite: 140, 168]: matriz[fila][columna][cite: 170].
+*/
+int matriz[3][4]; // 3 renglones, 4 columnas.
+
+/* TIPS DE EXAMEN SOBRE MATRICES:
+   - Recorrido: La estructura tradicional requiere dos ciclos 'for' anidados[cite: 179].
+     El primer ciclo (externo) controla los renglones (i)[cite: 180, 190].
+     El segundo ciclo (interno) controla las columnas (j)[cite: 183, 192].
+   - Pasar a Funciones (¡PREGUNTA CLÁSICA!): Cuando pasas una matriz a una función, 
+     DEBES especificar el tamaño de las columnas en los corchetes, pero los renglones pueden quedar vacíos[cite: 198].
+     Correcto: void imprimirMatriz(int x[][20], int n, int m);
+     Incorrecto: void imprimirMatriz(int x[][], int n, int m); -> Esto dará error de compilación.
+*/
+
+/* ============================================================================
+   TEMA 4: BÚSQUEDAS Y ORDENAMIENTO (SORTING)
+   ============================================================================
+   - Búsqueda Lineal: Recorre todo el arreglo inicio a fin[cite: 21]. Eficiente solo para arreglos desordenados o pequeños.
+   - Búsqueda Binaria: Mucho más rápida, revisa la mitad, pero EL ARREGLO DEBE ESTAR ORDENADO[cite: 77, 80, 82].
+   - Burbuja (Bubble Sort): Algoritmo de complejidad O(n^2)[cite: 8]. Compara elementos adyacentes y los intercambia.
+*/
